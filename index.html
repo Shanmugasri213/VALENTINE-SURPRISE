@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Surprise</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8e1f4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .no {
+            position: relative;
+        }
+        .yes {
+            position: relative;
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Will you be my Valentine?</h1>
+        <button class="yes" onclick="triggerHeartShower()">Yes</button>
+        <button class="no" onmouseover="moveAway(this)">No</button>
+    </div>
+    <script>
+        function triggerHeartShower() {
+            // Implement heart shower animation here
+            alert('You have chosen YES!');
+            window.location.href = 'love.html';
+        }
+
+        function moveAway(button) {
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+</body>
+</html>
